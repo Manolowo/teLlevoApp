@@ -8,13 +8,20 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
 
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule
-  ],
-  declarations: [InicioPage]
+    InicioPageRoutingModule,
+    RouterModule.forChild([{ path: '', component: InicioPage }])],
+    
+  
+  declarations: [InicioPage],
+
+  exports: [InicioPage],
+  
 })
 export class InicioPageModule {}
