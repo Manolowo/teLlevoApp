@@ -56,8 +56,15 @@ const routes: Routes = [
             path: 'conductor',
             loadChildren: () => import('./conductor/conductor.module').then((m) => m.ConductorPageModule),
           },
+
         ],
       },
+
+      {
+        path: 'login',
+        loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+      },
+      
     ]),
   ],
   
