@@ -7,7 +7,11 @@
 <ion-content [fullscreen]="true">
 
   <ion-list>
-
+    <ion-item>
+      <ion-input fill="solid" label="Nombre:" labelPlacement="floating" placeholder="Ingrese su Nombre"
+      [(ngModel)]="user"></ion-input>
+    </ion-item>
+  <br>
     <ion-item>
       <ion-input fill="solid" label="Correo:" type="email" labelPlacement="floating" placeholder="Ingrese su Correo institucional"
       [(ngModel)]="email"></ion-input>
@@ -24,6 +28,12 @@
 
   <ion-button expand="block" (click)="onLogin()">Ingresar
     <ion-icon slot="start" name="log-in-outline"></ion-icon>
+  </ion-button>
+
+  <br>
+
+  <ion-button expand="block" fill="outline" (click)="onForgotPassword()">Olvidé mi contraseña
+    <ion-icon slot="start" name="help-circle-outline"></ion-icon>
   </ion-button>
 
 </ion-content>

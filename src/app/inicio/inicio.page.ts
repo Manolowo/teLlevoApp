@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes } from '@angular/router';
+import { AuthLoginService } from '../auth-login.service';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -7,9 +9,10 @@ import { Routes } from '@angular/router';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  constructor(public authLoginService: AuthLoginService) {}
 
   ngOnInit() {
   }
 
 }
+

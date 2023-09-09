@@ -5,16 +5,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  
   <ion-card>
+
     <ion-item>
-      <a>Historial de Viajes</a>
+      <p>Bienvenido {{ authLoginService.username }}</p>
     </ion-item>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header">
+        <ion-label>Historial de Viajes</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"> Historial de Viajes aqui </div>
+    </ion-accordion>
+    
+    <ion-accordion value="second">
+      <ion-item slot="header">
+        <ion-label>Ajustes de Cuentas</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"> Ajustes de Cuentas </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
   </ion-card>
 
-  <ion-card>
-    <ion-item>
-      <a>Ajustes de Cuentas</a>
-    </ion-item>
-  </ion-card>   
 
 </ion-content>
