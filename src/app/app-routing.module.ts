@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { TabsComponent } from './tabs/tabs.component';
+import { NOTFOUNDPage } from './not-found/not-found.page';
 
 const routes: Routes = [
   {
@@ -29,6 +30,11 @@ const routes: Routes = [
     path: 'conductor',
     loadChildren: () => import('./conductor/conductor.module').then( m => m.ConductorPageModule)
   },
+  {
+    path: 'not-found',
+    loadChildren: () => import('./not-found/not-found.module').then( m => m.NOTFOUNDPageModule)
+  },
+
 ];
 
 @NgModule({
@@ -63,6 +69,11 @@ const routes: Routes = [
       {
         path: 'login',
         loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+      },
+      {
+        path: '**',
+        component: NOTFOUNDPage,
+        loadChildren: () => import('./not-found/not-found.module').then( m => m.NOTFOUNDPageModule)
       },
       
     ]),
