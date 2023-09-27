@@ -17,7 +17,9 @@ export class LoginPage implements OnInit {
 
   constructor(private authLoginService: AuthLoginService, private alertController: AlertController, private router: Router) { }
 
-  ngOnInit() {
+  nombre=localStorage.getItem('Nombre usuario');
+  ngOnInit() { 
+    console.log('Nombre de usuario: ',this.nombre)
   }
 
   async onLogin() {
@@ -58,6 +60,7 @@ export class LoginPage implements OnInit {
       });
       await alert.present();
     }
+
   }
   
 

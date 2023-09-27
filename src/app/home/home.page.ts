@@ -7,6 +7,23 @@ import { Router, Routes } from '@angular/router';
 })
 export class HomePage {
 
+  nameUser="Manolo";
+
+  //localStorage.setItem(nombre, content)
+  //this.router.navigate(['/registro'])
+
+  enviarDatos(){
+    localStorage.setItem('Nombre de usuario', this.nameUser)
+   // this.router.navigate(['/login'])
+  }
+  eliminarDatos(){
+    localStorage.removeItem('Nombre de usuario');
+  }
+
+  limpiarDatos(){
+    localStorage.clear();
+  }
+
   constructor(
     private router: Router,
     /* private activateroute: ActivatedRoute */
