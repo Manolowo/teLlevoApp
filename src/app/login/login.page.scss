@@ -1,0 +1,15 @@
+ion-content{
+    --background:rgb(10, 10, 63);
+  }
+
+#login  {
+    --background: yellow; /* Establece el color de fondo azul que desees */
+    color: #ffffff; /* Establece el color del texto en blanco */
+    --border-radius: 8px; /* Opcional: establece un radio de borde para el botón */
+}
+
+#omc {
+    --background: transparent; /* Fondo transparente */
+    color: white; /* Color del texto azul */
+    --border-color: #ffffff; /* Cambia el color del borde a blanco */
+  }
