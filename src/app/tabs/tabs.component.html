@@ -1,20 +1,28 @@
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
 
+  <ion-header [translucent]="true" class="custom-header">
+    <ion-toolbar class="custom-toolbar">
+      <ion-title class="custom-title">
+        Tu Titulo
+        <img src="#" alt="Logo">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-tab-bar slot="bottom">
     <ion-tab-button tab="pasajeros">
       <ion-icon name="people-outline"></ion-icon>
-      Pasajero
+      <span class="tab-label">Pasajero</span>
     </ion-tab-button>
 
     <ion-tab-button tab="inicio">
       <ion-icon name="home-outline"></ion-icon>
-      Inicio
+      <span class="tab-label">Inicio</span>
     </ion-tab-button>
 
     <ion-tab-button tab="conductor">
       <ion-icon name="car-outline"></ion-icon>
-      Conductor
+      <span class="tab-label">Conductor</span>
     </ion-tab-button>
-
   </ion-tab-bar>
 </ion-tabs>

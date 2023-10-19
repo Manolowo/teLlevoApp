@@ -1,0 +1,32 @@
+  /* Estilos para las pestañas */
+  ion-tab-button {
+    background-color: rgb(10, 10, 63); /* Cambia el color de fondo predeterminado */
+    --color-selected: #ffd902; /* Define el color amarillo cuando se selecciona */
+    --color-unselected: #ffffff; /* Define el color blanco cuando no se selecciona */
+  }
+  
+  /* Estilos para el ícono */
+  ion-tab-button ion-icon {
+    --color-selected: #ffd902; /* Define el color amarillo cuando se selecciona */
+    --color-unselected: #ffffff; /* Define el color blanco cuando no se selecciona */
+  }
+  
+  /* Estilos para las pestañas activas (seleccionadas) */
+  ion-tab-button[aria-selected="true"] ion-icon,
+  ion-tab-button[aria-selected="true"] .tab-button-text {
+    color: var(--color-selected); /* Cambia el color del ícono y el texto cuando se selecciona */
+  }
+  
+  .custom-title {
+    font-size: 20px; /* Cambia el tamaño de fuente a tu preferencia */
+    text-align: left; /* Alinea el texto al centro */
+    color: white;
+  }
+  
+  .custom-title img {
+    max-width: 100px; /* Cambia el ancho máximo de la imagen a tu preferencia */
+    margin: 10px; /* Agrega margen alrededor de la imagen si es necesario */
+  }
+  
+  /* Puedes agregar más estilos personalizados según tus necesidades */
+  

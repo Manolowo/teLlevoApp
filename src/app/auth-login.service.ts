@@ -52,9 +52,6 @@ export class AuthLoginService {
       return 'El correo electrónico no es válido. Debe ingresar con un correo institucional.';
     }
   }
-  logout() {
-    this._userIsAuthenticated = false;
-    this.router.navigateByUrl('/auth');
-  }
+
 }
 

@@ -1,9 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Te Llevo</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   
   <ion-card>
@@ -11,22 +5,24 @@
     <ion-item>
       <p>Bienvenido {{ authLoginService.username }}</p>
     </ion-item>
-
+  
   <ion-accordion-group>
-    <ion-accordion value="first">
+    <ion-accordion value="first" class="custom-accordion">
       <ion-item slot="header">
         <ion-label>Historial de Viajes</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content"> Historial de Viajes aqui </div>
     </ion-accordion>
-    
-    <ion-accordion value="second">
+
+    <ion-accordion value="second" class="custom-accordion">
       <ion-item slot="header">
         <ion-label>Ajustes de Cuentas</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content"> Ajustes de Cuentas </div>
     </ion-accordion>
   </ion-accordion-group>
+
+
 
   </ion-card>
 
