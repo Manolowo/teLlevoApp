@@ -4,6 +4,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { TabsComponent } from './tabs/tabs.component';
 import { NOTFOUNDPage } from './not-found/not-found.page';
 
+import { IngresadoGuard } from './ingresado.guard';
+
 const routes: Routes = [
   {
     path: 'home',
@@ -21,6 +23,7 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+    
   },
   {
     path: 'pasajeros',
@@ -53,14 +56,17 @@ const routes: Routes = [
           {
             path: 'inicio',
             loadChildren: () => import('./inicio/inicio.module').then((m) => m.InicioPageModule),
+            canActivate: [IngresadoGuard],
           },
           {
             path: 'pasajeros',
             loadChildren: () => import('./pasajeros/pasajeros.module').then((m) => m.PasajerosPageModule),
+            canActivate: [IngresadoGuard],
           },
           {
             path: 'conductor',
             loadChildren: () => import('./conductor/conductor.module').then((m) => m.ConductorPageModule),
+            canActivate: [IngresadoGuard],
           },
 
         ],
