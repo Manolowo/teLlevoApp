@@ -1,3 +1,18 @@
 <ion-content [fullscreen]="true">
-  <p>Esto es la vista de pasajeros</p>
+
+  <ion-card *ngFor="let users of apiService.data">
+    <ion-card-header>
+      Destino: {{ users.address.street }}
+    </ion-card-header>
+    <ion-card-content>
+      <p id="dImp">Precio del transporte: $X</p>
+      <p id="dImp">Mi auto: Camioneta Nissan Azul</p>
+      <p id="dImp">Conductor: {{ users.name }}</p>
+      <p id="dImp">Hora de Salida: xx.xx</p>
+      <p>Correo: {{ users.email }}</p>
+      <p>Contacto: {{ users.phone }}</p>
+      <ion-button id="llevame" expand="full" (click)="llevame()">Llevame!</ion-button>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

@@ -9,7 +9,5 @@ export class ConductorPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
