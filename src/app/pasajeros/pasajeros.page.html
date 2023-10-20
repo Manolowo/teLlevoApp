@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true">
-
+<!-- Consumir Api -->
   <ion-card *ngFor="let users of apiService.data">
     <ion-card-header>
       Destino: {{ users.address.street }}
@@ -11,7 +11,7 @@
       <p id="dImp">Hora de Salida: xx.xx</p>
       <p>Correo: {{ users.email }}</p>
       <p>Contacto: {{ users.phone }}</p>
-      <ion-button id="llevame" expand="full" (click)="llevame()">Llevame!</ion-button>
+      <ion-button id="llevame" expand="full" (click)="llevame(users.address.street, 'Camioneta Nissan Azul', users.name)">Llevame!</ion-button>
     </ion-card-content>
   </ion-card>
 
