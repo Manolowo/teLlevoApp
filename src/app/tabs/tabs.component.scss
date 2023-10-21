@@ -2,13 +2,13 @@
   ion-tab-button {
     background-color: rgb(10, 10, 63); /* Cambia el color de fondo predeterminado */
     --color-selected: #ffd902; /* Define el color amarillo cuando se selecciona */
-    --color-unselected: #ffffff; /* Define el color blanco cuando no se selecciona */
+    --color-unselected: #000000; /* Define el color blanco cuando no se selecciona */
   }
   
   /* Estilos para el ícono */
   ion-tab-button ion-icon {
     --color-selected: #ffd902; /* Define el color amarillo cuando se selecciona */
-    --color-unselected: #ffffff; /* Define el color blanco cuando no se selecciona */
+    --color-unselected: #000000; /* Define el color blanco cuando no se selecciona */
   }
   
   /* Estilos para las pestañas activas (seleccionadas) */
