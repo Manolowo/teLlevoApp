@@ -37,11 +37,6 @@ const routes: Routes = [
     path: 'not-found',
     loadChildren: () => import('./not-found/not-found.module').then( m => m.NOTFOUNDPageModule)
   },
-  {
-    path: 'geolocation',
-    loadChildren: () => import('./geolocation/geolocation.module').then( m => m.GeolocationPageModule)
-  },
-
 
 ];
 
@@ -90,10 +85,6 @@ const routes: Routes = [
         path: '**',
         component: NOTFOUNDPage,
         loadChildren: () => import('./not-found/not-found.module').then( m => m.NOTFOUNDPageModule)
-      },
-      {
-        path: 'geolocation',
-        loadChildren: () => import('./geolocation/geolocation.module').then( m => m.GeolocationPageModule)
       },
       
     ]),

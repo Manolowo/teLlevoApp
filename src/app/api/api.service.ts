@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  apiUrl='https://jsonplaceholder.typicode.com/users';
+  apiUrl='assets/js/data.json';
   data: any;
 
   constructor(private http: HttpClient) { }
-
-  obtenerDatosApi() {
-    return this.http.get(this.apiUrl).subscribe((response) => {
-      this.data = response;
-    });
+  getConductores(): Observable<any> {
+    return this.http.get(this.apiUrl);
   }
+  
 }

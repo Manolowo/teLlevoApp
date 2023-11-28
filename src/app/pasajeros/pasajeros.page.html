@@ -1,17 +1,37 @@
 <ion-content [fullscreen]="true">
-<!-- Consumir Api -->
-  <ion-card *ngFor="let users of apiService.data">
-    <ion-card-header>
-      Destino: {{ users.address.street }}
-    </ion-card-header>
+  <!-- Consumir Api -->
+  <ion-card *ngIf="conductores">
     <ion-card-content>
-      <p id="dImp">Precio del transporte: $X</p>
-      <p id="dImp">Mi auto: Camioneta Nissan Azul</p>
-      <p id="dImp">Conductor: {{ users.name }}</p>
-      <p id="dImp">Hora de Salida: xx.xx</p>
-      <p>Correo: {{ users.email }}</p>
-      <p>Contacto: {{ users.phone }}</p>
-      <ion-button id="llevame" expand="full" (click)="llevame(users.address.street, 'Camioneta Nissan Azul', users.name)">Llevame!</ion-button>
+      <ion-list *ngFor="let conductor of conductores">
+        <ion-item>
+          <ion-label>
+            <h2>Conductor: {{ conductor.nombre }}</h2>
+            <p>Correo: {{ conductor.correo }}</p>
+            <p>Vehiculo: {{ conductor.vehiculo }}</p>
+            <p>Patente: {{ conductor.patente }}</p>
+            <p>Punto Destino: {{ conductor.punto_destino.nombre }}</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-button
+        (click)="mostrarUbicacion(conductor.punto_destino.latitud, conductor.punto_destino.longitud)">
+        Mostrar Ubicación
+      </ion-button>
+      
+        <ion-button
+          id="llevame"
+          expand="full"
+          (click)="llevame(conductor.punto_destino.nombre, conductor.vehiculo, conductor.patente, conductor.nombre)"
+          >Llevame!</ion-button
+        >
+
+          <!-- Modal oculto -->
+  <div id="map-modal-container" hidden>
+    <div id="map-modal" style="height: 400px;"></div>
+    <ion-button id="cerrar-mapa" (click)="cerrarMapa()">Cerrar Mapa</ion-button>
+  </div>
+
+      </ion-list>
     </ion-card-content>
   </ion-card>
 

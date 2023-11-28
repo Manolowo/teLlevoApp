@@ -1,0 +1,40 @@
+{
+    "conductores": [
+      {
+        "id": 1,
+        "nombre": "Juan Pérez",
+        "correo": "juan.perez@duocuc.cl",
+        "vehiculo": "Camioneta Nisan Azul",
+        "patente": "ABC123",
+        "punto_destino": {
+          "nombre": "",
+          "latitud": -34.6037389,
+          "longitud": -58.3815704
+        }
+      },
+      {
+        "id": 2,
+        "nombre": "María Rodríguez",
+        "correo": "maria.rodriguez@duocuc.cl",
+        "vehiculo": "Camioneta Chevrolet Rojo",
+        "patente": "XYZ789",
+        "punto_destino": {
+          "nombre": "",
+          "latitud": -34.611807,
+          "longitud": -58.417836
+        }
+      },
+      {
+        "id": 3,
+        "nombre": "Carlos Gómez",
+        "correo": "carlos.gomez@duocuc.cl",
+        "vehiculo": "Auto Toyota Negro",
+        "patente": "DEF456",
+        "punto_destino": {
+          "nombre": "",
+          "latitud": -34.609649,
+          "longitud": -58.398819
+        }
+      }
+    ]
+  }

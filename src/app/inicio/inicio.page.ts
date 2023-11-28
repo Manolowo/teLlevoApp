@@ -7,7 +7,7 @@ import { AuthLoginService } from '../auth-login.service';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-  datosViaje: { destino: string, auto: string, conductor: string, fechaSalida: Date } | null = null;
+  datosViaje: { destino: string, auto: string, patente: string,conductor: string, fechaSalida: Date } | null = null;
 
   constructor(public authLoginService: AuthLoginService) {}
 
