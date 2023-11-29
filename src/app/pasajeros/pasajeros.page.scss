@@ -8,8 +8,29 @@
 
   #llevame  {
     --background: #ffd902; 
-    color: #020202; 
+    color: black; 
     --border-radius: 8px; 
     font-size: 1.1rem; 
     font-weight: 600;
+}
+
+#map-modal-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#map-modal {
+  background: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#cerrar-mapa {
+  color: white;
+  top: 10px;
+  right: 10px;
 }

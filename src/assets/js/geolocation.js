@@ -1,4 +1,4 @@
-function mostrarUbicacionJS(latitud, longitud, cerrarMapa) {
+function mostrarUbicacionJS(latitud, longitud) {
     // Mostrar el modal al hacer clic en el botón
     document.getElementById('map-modal-container').removeAttribute('hidden');
   
@@ -18,12 +18,4 @@ function mostrarUbicacionJS(latitud, longitud, cerrarMapa) {
       title: 'Destino',
     });
   
-    // Agrega el evento para cerrar el mapa al hacer clic en el botón "Cerrar Mapa"
-    document.getElementById('cerrar-mapa').addEventListener('click', cerrarMapa);
-  }
-  
-  function cerrarMapa() {
-    // Ocultar el modal al cerrar
-    document.getElementById('map-modal-container').setAttribute('hidden', 'true');
-  }
-  
+}

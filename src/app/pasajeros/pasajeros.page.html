@@ -14,25 +14,27 @@
         </ion-item>
 
         <ion-button
-        (click)="mostrarUbicacion(conductor.punto_destino.latitud, conductor.punto_destino.longitud)">
-        Mostrar Ubicación
-      </ion-button>
-      
+          id=""
+          expand="full"
+          (click)="mostrarUbicacion(conductor.punto_destino.latitud, conductor.punto_destino.longitud)"
+        >
+          Mostrar Ubicación <ion-icon name="map-outline"></ion-icon>
+        </ion-button>
+
         <ion-button
           id="llevame"
           expand="full"
           (click)="llevame(conductor.punto_destino.nombre, conductor.vehiculo, conductor.patente, conductor.nombre)"
-          >Llevame!</ion-button
+          >Llevame <ion-icon name="alert-outline"></ion-icon></ion-button
         >
-
-          <!-- Modal oculto -->
-  <div id="map-modal-container" hidden>
-    <div id="map-modal" style="height: 400px;"></div>
-    <ion-button id="cerrar-mapa" (click)="cerrarMapa()">Cerrar Mapa</ion-button>
-  </div>
-
       </ion-list>
     </ion-card-content>
-  </ion-card>
 
+      <!-- Modal oculto -->
+  <div id="map-modal-container" hidden>
+    <div id="map-modal" style="height: 400px; width: 100%;"></div>
+    <ion-button expand="full" id="cerrar-mapa" (click)="cerrarMapa()">Cerrar Mapa <ion-icon name="close-outline"></ion-icon></ion-button>
+  </div>
+
+  </ion-card>
 </ion-content>

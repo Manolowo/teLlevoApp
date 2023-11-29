@@ -7,9 +7,9 @@
         "vehiculo": "Camioneta Nisan Azul",
         "patente": "ABC123",
         "punto_destino": {
-          "nombre": "",
-          "latitud": -34.6037389,
-          "longitud": -58.3815704
+          "nombre": "Fe y esperanza, Alerce",
+          "latitud": -41.387588,
+          "longitud": -72.910006
         }
       },
       {
@@ -19,9 +19,9 @@
         "vehiculo": "Camioneta Chevrolet Rojo",
         "patente": "XYZ789",
         "punto_destino": {
-          "nombre": "",
-          "latitud": -34.611807,
-          "longitud": -58.417836
+          "nombre": "Evaldo Hohmann, Misasol",
+          "latitud": -41.480079,
+          "longitud": -72.972859
         }
       },
       {
@@ -31,9 +31,9 @@
         "vehiculo": "Auto Toyota Negro",
         "patente": "DEF456",
         "punto_destino": {
-          "nombre": "",
-          "latitud": -34.609649,
-          "longitud": -58.398819
+          "nombre": "Avenida Colón, Puerto Varas",
+          "latitud": -41.323921,
+          "longitud": -72.985084
         }
       }
     ]

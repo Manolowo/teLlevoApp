@@ -1,6 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/core';
 import { ApiService } from '../api/api.service';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular'; 
 
 declare var google: any;
 
@@ -11,8 +11,13 @@ declare var google: any;
 })
 export class PasajerosPage implements OnInit {
 
-  constructor(public apiService: ApiService , private alertController: AlertController) { }
-
+  constructor(
+    public apiService: ApiService,
+    private alertController: AlertController,
+    private navCtrl: NavController,
+    private renderer: Renderer2 
+  ) { }
+  
   conductores: any[] = [];
   mostrarMapa: boolean = false;
 
@@ -49,16 +54,23 @@ export class PasajerosPage implements OnInit {
     await alert.present();
   }
 
-  mostrarUbicacion(latitud: number, longitud: number) {
-    mostrarUbicacionJS(latitud, longitud,  () => this.cerrarMapa());
+  mostrarUbicacion(latitud: number, longitud: number) {    
     this.mostrarMapa = true;
+    mostrarUbicacionJS(latitud, longitud);
   }
 
   cerrarMapa() {
     this.mostrarMapa = false;
-    console.log('Cerrar mapa');
+    const mapContainer = this.renderer.selectRootElement('#map-modal-container');
+    this.renderer.setAttribute(mapContainer, 'hidden', 'true');
+  }
+
+  ionViewWillLeave() {
+    if (this.mostrarMapa) {
+      this.cerrarMapa();
+    }
   }
 
 }
 
-declare function mostrarUbicacionJS(latitud: number, longitud: number, cerrarMapa: () => void): void;
+declare function mostrarUbicacionJS(latitud: number, longitud: number): void;
